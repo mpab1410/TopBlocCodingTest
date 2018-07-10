@@ -31,6 +31,11 @@ public class Driver {
         List<Integer> dividedSet = DataSet.divide(one, two);
         List<String> concatSet = DataSet.concat(one, two);
 
+        System.out.println("Result of multiplying numberSetOne: "+multipliedSet);
+        System.out.println("Result of dividing numberSetTwo: "+dividedSet);
+        System.out.println("Result of concating wordSetOne: "+concatSet);
+        System.out.println();
+
         // perform post request
         HttpResponse<String> response;
 
@@ -48,7 +53,7 @@ public class Driver {
         }
 
         // print out response
-        System.out.println(response.getStatus());
+        System.out.println("Server Response: "+response.getStatus());
         System.out.println(response.getBody());
     }
 }
